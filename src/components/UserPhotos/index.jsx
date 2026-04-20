@@ -11,7 +11,7 @@ function UserPhotos({ advancedEnabled }) {
   const currentIndex = parseInt(photoIndex || "0", 10);
 
   useEffect(() => {
-    fetchModel("/photosOfUser/" + userId)
+    fetchModel("/photo/photosOfUser/" + userId)
       .then((data) => setPhotos(data))
       .catch((err) => console.error(err));
   }, [userId]);
